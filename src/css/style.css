@@ -1,0 +1,16 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+}
+
+input,
+textarea {
+  padding: 0.5rem;
+}
