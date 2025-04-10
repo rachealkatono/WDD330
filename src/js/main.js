@@ -1,8 +1,17 @@
 // This is the main JavaScript file for the Event Planner application.
-import { login, register, logout, onUserChange } from "./auth.js";
 import { saveEvent, getEvents } from "./events.js";
 const emailInput = document.getElementById("email");
 const passwordInput = document.getElementById("password");
+import { login, register, logout, onUserChange } from './auth.js';
+import {
+  saveRSVP,
+  getRSVPs,
+  saveTask,
+  getTasks,
+  toggleTask
+} from './events.js';
+import './venue.js';
+
 
 document.getElementById("loginForm").addEventListener("submit", async (e) => {
   e.preventDefault();
