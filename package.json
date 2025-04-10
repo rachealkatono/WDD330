@@ -1,18 +1,17 @@
 {
-  "name": "outside",
-  "version": "2.0.0",
-  "description": "Boilerplate for WDD 330 SleepOutside project",
+  "name": "event-planner-pro",
+  "version": "1.0.0",
+  "description": "Final Project for WDD 330 - Event Planner Pro",
   "main": "main.js",
-  "scripts": {
-    "start": "vite",
-    "build": "vite build --emptyOutDir",
-    "lint": "eslint *.js src/**/*.js",
-    "format": "prettier --ignore-path ./.gitignore --write \"./**/*.{html,json,js,ts,css}\"",
-    "test": "jest",
-    "preview": "vite preview"
+ "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "lint": "eslint .",
+    "format": "prettier --write ."
   },
-  "author": "Shane Thompson",
-  "license": "ISC",
+  "author": "Racheal Katono",
+  "license": "MIT",
   "devDependencies": {
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^8.10.0",

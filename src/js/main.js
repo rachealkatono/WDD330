@@ -52,11 +52,42 @@ document.getElementById("eventForm").addEventListener("submit", (e) => {
 
 function showEvents() {
   const events = getEvents();
-  const list = document.getElementById("eventList");
-  list.innerHTML = events
-    .map(
-      (event) =>
-        `<div><h3>${event.name}</h3><p>${event.date} ${event.time}</p><p>${event.description}</p></div>`,
-    )
-    .join("");
+  document.getElementById('eventList').innerHTML = events.map(e =>
+    `<div><h3>${e.name}</h3><p>${e.date} ${e.time}</p><p>${e.description}</p></div>`).join('');
+}
+
+// RSVP
+document.getElementById('rsvpForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const guest = {
+    name: document.getElementById('guestName').value,
+    response: document.getElementById('response').value
+  };
+  saveRSVP(guest);
+  showRSVPs();
+});
+function showRSVPs() {
+  const rsvps = getRSVPs();
+  document.getElementById('rsvpList').innerHTML = rsvps.map(r => `<p>${r.name} - ${r.response}</p>`).join('');
+}
+
+// Tasks
+document.getElementById('taskForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const task = document.getElementById('taskInput').value;
+  saveTask(task);
+  showTasks();
+});
+function showTasks() {
+  const tasks = getTasks();
+  const list = document.getElementById('taskList');
+  list.innerHTML = tasks.map((t, i) =>
+    `<li><input type="checkbox" ${t.done ? 'checked' : ''} data-index="${i}"><span style="text-decoration:${t.done ? 'line-through' : 'none'}">${t.task}</span></li>`
+  ).join('');
+  list.querySelectorAll('input').forEach(input => {
+    input.addEventListener('change', () => {
+      toggleTask(input.dataset.index);
+      showTasks();
+    });
+  });
 }
