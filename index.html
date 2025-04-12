@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Event Planner Pro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Styles & Fonts -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+</head>
+
+<body>
+  <header class="section has-background-info">
+    <div class="container has-text-centered">
+      <h1 class="title has-text-white">Event Planner Pro</h1>
+    </div>
+    <nav class="has-text-right mt-2">
+      <button id="logoutBtn" class="button is-light is-small">Logout</button>
+    </nav>
+  </header>
+
+  <main class="section">
+    <!-- Login/Register Section -->
+    <section id="authSection" class="section fade-in">
+      <div class="container">
+        <div class="box" style="max-width: 400px; margin: auto;">
+          <h2 class="title has-text-centered has-text-info">🔐 Login or Register</h2>
+          <form id="loginForm">
+            <div class="field">
+              <label class="label">Email</label>
+              <div class="control">
+                <input type="email" id="email" class="input" placeholder="Email" required />
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">Password</label>
+              <div class="control">
+                <input type="password" id="password" class="input" placeholder="Password" required />
+              </div>
+            </div>
+            <div class="buttons is-centered mt-4">
+              <button type="submit" class="button is-primary">Login</button>
+              <button type="button" id="registerBtn" class="button is-link is-light">Register</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Event Section -->
+    <section id="eventSection" class="section fade-in" style="display: none;">
+      <div class="container">
+        <h2 class="title is-4">🗓 Create Event</h2>
+        <form id="eventForm" class="box">
+          <input type="text" id="eventName" class="input mb-2" placeholder="Event Name" required />
+          <input type="date" id="eventDate" class="input mb-2" required />
+          <input type="time" id="eventTime" class="input mb-2" required />
+          <textarea id="eventDescription" class="textarea mb-3" placeholder="Event Description" required></textarea>
+          <button type="submit" class="button is-success">Save Event</button>
+        </form>
+        <div id="eventList" class="content mt-4"></div>
+      </div>
+    </section>
+
+    <!-- Budget Tracker -->
+    <section id="budgetSection" class="section fade-in" style="display: none;">
+      <div class="container">
+        <h2 class="title is-4">💵 Budget Tracker</h2>
+        <form id="budgetForm" class="box">
+          <input type="text" id="expenseName" class="input mb-2" placeholder="Expense Name" required />
+          <input type="number" id="expenseAmount" class="input mb-2" placeholder="Amount (UGX)" required />
+          <button type="submit" class="button is-primary">Add Expense</button>
+        </form>
+        <div id="budgetSummary" class="content">
+          <p><strong>Total Spent:</strong> $ <span id="totalSpent">0</span></p>
+          <ul id="expenseList"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Weather Forecast -->
+    <section id="weatherSection" class="section fade-in" style="display: none;">
+      <div class="container">
+        <h2 class="title is-4">🌤 Event Weather Forecast</h2>
+        <form id="weatherForm" class="box">
+          <input type="text" id="weatherCity" class="input mb-3" placeholder="Enter City (e.g. Kampala)" required />
+          <button type="submit" class="button is-link">Check Weather</button>
+        </form>
+        <div id="weatherResult" class="content mt-4"></div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
