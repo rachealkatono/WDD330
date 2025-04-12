@@ -1,6 +1,6 @@
 const searchInput = document.getElementById('venueSearch');
 const resultsList = document.getElementById('venueResults');
-const GOOGLE_API_KEY = 'YOUR_API_KEY';
+const GOOGLE_API_KEY = 'AIzaSyAgWMiAxsmKGPFAfuPHUAP0LLnDA6TT_-s';
 
 searchInput.addEventListener('input', async () => {
   const query = searchInput.value;

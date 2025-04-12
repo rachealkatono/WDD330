@@ -29,11 +29,20 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
 document.getElementById("registerBtn").addEventListener("click", async () => {
   try {
     await register(emailInput.value, passwordInput.value);
-    console.log("User registered!");
+
+    // ✅ Show success message
+    alert("🎉 Registration successful! You can now log in.");
+
+    // Optional: auto-log in or clear the fields
+    // await login(emailInput.value, passwordInput.value);
+    // OR
+    // document.getElementById("password").value = "";
+
   } catch (err) {
-    alert(err.message);
+    alert("❌ " + err.message);
   }
 });
+
 
 document.getElementById("logoutBtn").addEventListener("click", () => {
   logout();
