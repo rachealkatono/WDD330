@@ -1,12 +1,13 @@
 // Import Firebase core and auth
-import { initializeApp } from "firebase/app";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
 import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut,
   onAuthStateChanged
-} from "firebase/auth";
+} from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
+
 
 // Your Firebase config
 const firebaseConfig = {
