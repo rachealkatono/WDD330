@@ -1,29 +1,46 @@
-# BYU-Pathway Worldwide Online
-## WDD 330 - Web Frontend Development II
+# 🎉 Event Planner Pro
 
-### ⛺ SleepOutside Starter Code
+**Event Planner Pro** is a responsive web application designed to help users plan events efficiently by managing RSVPs, tasks, budgets, and weather forecasts — all with a sleek modern UI.
 
- - This repository is the start of the SleepOutside web application project for WDD 330. The repository contains branches which are checkpoints for the team and individual assignments throughout the course.
-
- - https://byui-cse.github.io/wdd330-ww-course/week01/team.html
-
-[Netlify link](https://fantastic-alpaca-d110db.netlify.app/)
-
-### Prerequisites
-
-- You must have Node installed to run the following commands.
-[WDD 330 Setup Environment](https://byui-cse.github.io/wdd330-ww-course/intro/) 
-
-### Common Workflow Commands
-
-- `npm run lint` to run ESLint against your code to find errors.
-- `npm run format` to run Prettier to automatically format your code.
-- `npm run start` starts up a local server and updates on any JS or CSS/SCSS 
-- `npm run build` to build final files when you are ready to turn in.
-
+This project was created as the **Final Web Application Project** for the **WDD 330 – Web Frontend Development II** course at BYU-Pathway Worldwide.
 
 ---
-_BYU-Pathway Worldwide improves lives through access to spiritually based, online affordable higher education. Its mission is to develop disciples of Jesus Christ who are leaders in their homes, the Church, and their communities._
 
+## 🚀 Live Site
 
+🌐 **Deployed on Firebase:**  
+[👉 Visit Live App Here](https://your-project-id.web.app)  
+> (Replace this with your actual deployed Firebase URL)
+
+---
+
+## 📌 Features
+
+- 🔐 **User Authentication** via Firebase (Login/Register/Logout)
+- 📝 **Event Creation Form** with event name, date, time, and description
+- 🙋‍♀️ **RSVP Tracker** for guest responses
+- ✅ **Task Manager** with checklist toggle
+- 💰 **Budget Tracker** to manage expenses
+- 🌤 **Weather Forecast** using OpenWeatherMap API
+- 📍 **Venue Suggestions** using Google Places API
+- 💅 Responsive layout using Bulma + custom CSS
+- 🎨 CSS animations (fade-in effects, hover transitions)
+- 📦 Data stored in **localStorage**
+
+---
+
+## 📦 Technologies Used
+
+- **HTML5**, **CSS3**, and **Vanilla JavaScript**
+- **Firebase Authentication**
+- **OpenWeatherMap API** (for live weather data)
+- **Google Places API** (for venue/location suggestions)
+- **Bulma CSS Framework**
+- **Vite** (for build and dev server)
+- **ESLint** (for code quality and formatting)
+- **ES Modules** for modular structure
+
+---
+
+## 🧭 Folder Structure
 
